@@ -1,3 +1,30 @@
+function CustomP({ className = "", slim = false }: { className?: string; slim?: boolean }) {
+  const scaleX = slim ? 0.4 : 0.45;
+  const marginLeft = slim ? '-0.65em' : '-0.55em';
+  
+  return (
+    <svg
+      viewBox="0 0 70 62"
+      xmlns="http://www.w3.org/2000/svg"
+      className={`inline-block ${className}`}
+      style={{ height: '1.15em', width: 'auto', verticalAlign: 'baseline', marginBottom: '-0.18em', transform: `scaleX(${scaleX})`, transformOrigin: 'right center', marginLeft }}
+      fill="currentColor"
+    >
+      <path d="M66,25 C67,33 65,38 57,40 C51,41 44,41 37,42 C37,38 37,36 37,33 C41,33 44,33 47,32 C49,32 50,30 51,29 C50,28 49,25 47,25 C42,25 37,25 32,25 C27,25 22,25 16,25 C16,23 16,22 16,20 C16,16 17,15 21,15 C32,16 42,16 53,16 C58,17 64,18 66,25 z" />
+      <path d="M16,49 C16,43 16,37 16,32 C21,32 24,32 29,32 C29,39 29,45 29,52 C25,52 22,52 18,52 C17,52 17,50 16,49 z" />
+    </svg>
+  );
+}
+
+// PHASE ONE text with custom P
+function PhaseOneText({ slim = false }: { slim?: boolean }) {
+  return (
+    <>
+      <CustomP slim={slim} />HASE ONE
+    </>
+  );
+}
+
 export default function Home() {
   return (
     <div className="bg-background overflow-x-hidden">
@@ -6,7 +33,7 @@ export default function Home() {
         <section className="h-screen flex flex-col items-center justify-between px-4 py-6">
           <header>
             <h1 className="text-2xl md:text-3xl font-bold text-foreground text-center font-bebas tracking-wide scale-x-300 md:scale-x-450 select-none">
-              PHASE ONE
+              <PhaseOneText />
             </h1>
             <h2 className="pt-4 text-2xl md:text-3xl font-bold text-foreground/25 text-center font-bebas tracking-wide select-none">
               MOVE WITH PURPOSE
@@ -47,7 +74,7 @@ export default function Home() {
         <section className="min-h-screen flex flex-col items-center justify-between px-6">
           <div className="pt-50">
             <h2 className="text-2xl md:text-3xl font-black text-foreground text-center font-bebas tracking-wide scale-x-250 md:scale-x-350 select-none mb-2">
-              PHASE ONE
+              <PhaseOneText slim />
             </h2>
             <h2 className="text-2xl md:text-3xl font-black text-foreground text-center font-bebas tracking-wide scale-x-250 md:scale-x-350 select-none mb-8">
               CLUB
@@ -56,7 +83,7 @@ export default function Home() {
             <p className="text-lg font-bebas text-foreground tracking-wide text-center opacity-80 mb-12">
               WE&apos;RE BUILDING A LONG-TERM COMMUNITY.
               <br />
-              JOIN PHASE ONE FROM DAY ONE.
+              JOIN <PhaseOneText slim /> FROM DAY ONE.
             </p>
 
             <input
@@ -96,7 +123,7 @@ export default function Home() {
             WHATSAPP
           </a>
         </div>
-        <span className="text-xs text-foreground/50">© 2025 PHASE ONE</span>
+        <span className="text-xs text-foreground/50">© 2025 <PhaseOneText slim /></span>
       </footer>
     </div>
   );

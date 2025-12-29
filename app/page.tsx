@@ -83,7 +83,7 @@ export default function Home() {
             <p className="text-lg font-bebas text-foreground tracking-wide text-center opacity-80 mb-12">
               WE&apos;RE BUILDING A LONG-TERM COMMUNITY.
               <br />
-              JOIN <PhaseOneText slim /> FROM DAY ONE.
+              JOIN PHASE ONE FROM DAY ONE.
             </p>
 
             <input
@@ -123,7 +123,7 @@ export default function Home() {
             WHATSAPP
           </a>
         </div>
-        <span className="text-xs text-foreground/50">© 2025 <PhaseOneText slim /></span>
+        <span className="text-xs text-foreground/50">© 2025 PHASE ONE</span>
       </footer>
     </div>
   );

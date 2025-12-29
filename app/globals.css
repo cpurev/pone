@@ -2,6 +2,9 @@
 
 :root {
   --font-bebas: "Bebas Neue", sans-serif;
+  --color-background: #180908;
+  --color-foreground: #D1D0D0;
+  --color-muted: #5C4E4E;
 }
 
 @theme inline {
@@ -9,6 +12,6 @@
 }
 
 body {
-  background: #ffffff;
-  color: #000000;
+  background: var(--color-background);
+  color: var(--color-foreground);
 }

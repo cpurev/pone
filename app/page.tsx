@@ -30,75 +30,81 @@ export default function Home() {
     <div className="bg-background overflow-x-hidden">
       <main>
         {/* First Page */}
-        <section className="h-screen flex flex-col items-center justify-between px-4 py-6">
-          <header>
-            <h1 className="text-2xl md:text-3xl font-bold text-foreground text-center font-bebas tracking-wide scale-x-300 md:scale-x-450 select-none">
-              <PhaseOneText />
-            </h1>
-            <h2 className="pt-4 text-2xl md:text-3xl font-bold text-foreground/25 text-center font-bebas tracking-wide select-none">
-              MOVE WITH PURPOSE
-            </h2>
-          </header>
-
-          <div className="flex flex-col items-center gap-4 pb-16">
-            <svg
-              width="400"
-              height="400"
-              viewBox="0 0 400 400"
-              xmlns="http://www.w3.org/2000/svg"
-              className="select-none pointer-events-none w-40 h-40 md:w-64 md:h-64 text-foreground drop-shadow-[0_0_40px_var(--color-foreground)] md:drop-shadow-[0_0_60px_var(--color-foreground)]"
-            >
-              <path
-                d="M 200 110 Q 200 200 290 200 Q 200 200 200 290 Q 200 200 110 200 Q 200 200 200 110 Z"
-                fill="currentColor"
-              />
-            </svg>
-            <div className="text-center max-w-[606px]">
-              <p className="text-xs uppercase tracking-[0.25em] text-foreground/50">
-                Performance Apparel
-              </p>
-              <p className="pt-2 text-md font-light text-foreground/75 select-none">
-                Every rep, every mile, every drop of sweat leads somewhere. 
-                Phase One was born from a drive to elevate training beyond limits — to craft gear as
-                focused and relentless as the athletes who wear it. Designed for those who rise early, 
-                work late, and refuse average, our premium performance wear is built for people who move 
-                with purpose. This is only the beginning.
-              </p> 
-            </div>
+        <section
+          className="relative min-h-screen w-full flex items-center justify-center overflow-hidden"
+          style={{ background: 'linear-gradient(to bottom, #000000, #0A0A0A, #000000)' }}
+        >
+          {/* Centered pulsing glow */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div
+              className="w-[600px] h-[600px] bg-white/5 rounded-full opacity-50 animate-pulse"
+              style={{ filter: 'blur(120px)', animationDuration: '4s' }}
+            />
           </div>
 
-          <span className="font-bebas text-foreground/20 text-sm tracking-[0.5em] select-none">01</span>
+          {/* Content */}
+          <div className="relative z-10 w-full max-w-3xl mx-auto px-6 sm:px-8 py-24 sm:py-32 lg:py-40 text-center">
+            {/* Phase One Logo */}
+            <div className="mb-12 sm:mb-16">
+              <img
+                src="/img/1.png"
+                alt="Phase One"
+                className="h-8 sm:h-10 lg:h-12 mx-auto select-none pointer-events-none invert opacity-50"
+              />
+            </div>
+
+            {/* Tagline */}
+            <div className="w-full flex items-center justify-center mb-6 sm:mb-8">
+              <h2
+                className="uppercase tracking-[0.2em] text-white/5 hover:text-white/10 transition-colors text-lg sm:text-3xl lg:text-4xl max-w-[90vw] text-center select-none"
+                style={{ fontWeight: 800 }}
+              >
+                SOMETHING NEW IS NEAR
+              </h2>
+            </div>
+
+            {/* Email form */}
+            <form className="w-full max-w-xl mx-auto mb-8">
+              <div className="flex flex-row gap-2 sm:gap-3 items-center">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  required
+                  className="h-10 sm:h-11 bg-white/5 border border-white/20 text-white placeholder:text-white/50 focus:border-white/50 focus:ring-2 focus:ring-white/25 rounded-lg px-3 sm:px-3 outline-none transition-all hover:bg-white/10 hover:border-white/30 basis-2/3 sm:flex-1 text-sm sm:text-base"
+                  aria-label="Email address"
+                />
+                <button
+                  type="submit"
+                  className="h-10 sm:h-11 px-3 sm:px-4 bg-black text-white hover:bg-black/90 font-medium rounded-lg cursor-pointer transition-all disabled:opacity-50 disabled:cursor-not-allowed border border-white/20 shadow-[0_0_0_1px_rgba(255,255,255,0.06)_inset] basis-1/3 text-sm sm:text-base"
+                >
+                  Notify me
+                </button>
+              </div>
+            </form>
+          </div>
         </section>
 
         {/* Club Section */}
-        <section className="min-h-screen flex flex-col items-center justify-between px-6">
-          <div className="pt-50">
-            <h2 className="text-2xl md:text-3xl font-black text-foreground text-center font-bebas tracking-wide scale-x-250 md:scale-x-350 select-none mb-2">
-              <PhaseOneText slim />
-            </h2>
-            <h2 className="text-2xl md:text-3xl font-black text-foreground text-center font-bebas tracking-wide scale-x-250 md:scale-x-350 select-none mb-8">
-              CLUB
-            </h2>
+        <section className="min-h-screen flex flex-col items-center justify-end px-6">
+          <div className="max-w-3xl">
+            <div className="w-full flex items-center justify-center mb-6 sm:mb-8">
+                  <p
+                    className="uppercase tracking-[0.2em] text-white/5 hover:text-white/10 transition-colors text-md max-w-[90vw] text-center select-none"
+                    style={{ fontWeight: 800 }}
+                  >
+                    MOVE WITH PURPOSE
+                  </p>
+                </div>
 
-            <p className="text-lg font-bebas text-foreground tracking-wide text-center opacity-80 mb-12">
-              WE&apos;RE BUILDING A LONG-TERM COMMUNITY.
-              <br />
-              JOIN PHASE ONE FROM DAY ONE.
+            <p className="text-sm text-foreground font-light tracking-wide text-center opacity-80 mb-12">
+            Every rep, every mile, every drop of sweat leads somewhere. Phase One was born from a drive to elevate training beyond limits — to craft gear as focused and relentless as the athletes who wear it. Designed for those who rise early, work late, and refuse average, our premium performance wear is built for people who move with purpose. This is only the beginning.
             </p>
 
-            <input
-              type="email"
-              placeholder="Enter email"
-              className="w-full max-w-xs px-4 py-3 border border-foreground text-foreground font-bebas text-lg tracking-wide placeholder:text-foreground/50 focus:outline-none focus:ring-2 focus:ring-foreground"
-            />
-          </div>
-          <div className="pb-4">
-            <span className="font-bebas text-foreground/20 text-sm tracking-[0.5em] select-none">02</span>
           </div>
         </section>
       </main>
 
-      <footer className="flex flex-col items-center gap-4 py-8 font-bebas text-foreground tracking-wide px-4">
+      <footer className="flex flex-col items-center gap-4 py-8 font-bebas text-foreground tracking-wide px-4 opacity-50">
         <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-base md:text-lg">
           <a
             href="https://instagram.com"
@@ -123,7 +129,7 @@ export default function Home() {
             WHATSAPP
           </a>
         </div>
-        <span className="text-xs text-foreground/50">© 2025 PHASE ONE</span>
+        <span className="text-xs text-foreground/50">© 2026 PHASE ONE</span>
       </footer>
     </div>
   );

@@ -107,7 +107,7 @@ export default function Home() {
       <footer className="flex flex-col items-center gap-4 py-8 font-bebas text-foreground tracking-wide px-4 opacity-50">
         <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-base md:text-lg">
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/phaseoneclub.se/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:opacity-60 transition-opacity"
@@ -115,13 +115,13 @@ export default function Home() {
             INSTAGRAM
           </a>
           <a
-            href="mailto:contact@phaseone.com"
+            href="mailto:info@phaseoneclub.se"
             className="hover:opacity-60 transition-opacity"
           >
             EMAIL
           </a>
           <a
-            href="https://wa.me/"
+            href="https://wa.me/46708413803"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:opacity-60 transition-opacity"
